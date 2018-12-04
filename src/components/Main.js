@@ -22,7 +22,7 @@ class Main extends Component
 	            								<Route exact path="/home" component={Home}/>
 	            								<Route exact path="/countries" component={Countries}/>		
 	            							</div>
-							</Col>
+	            					</Col>
 	            				</Row>
 	            			</Container>
 	            		</div>
