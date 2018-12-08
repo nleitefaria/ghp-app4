@@ -21,9 +21,9 @@ class Home extends Component
         this.state = {
         		results: [],
         		columns: [
-        			{ name: 'title', title: 'Title'},
-        			{ name: 'director', title: 'Director' },
-        			{ name: 'producer', title: 'Producer' },
+        			{ name: 'countryId', title: 'ID'},
+        			{ name: 'countryName', title: 'Name' }
+        			
         		],
         		rows: [],
         		totalCount: 0,
@@ -66,33 +66,15 @@ class Home extends Component
 		if (queryString === this.lastQuery) {
 		    return;
 		}
-		/*
-		fetch(queryString)
-		      .then(response => response.json())
-		      .then(data => this.setState({
-		        rows: data.content,
-		        totalCount: data.totalElements,
-		        loading: false,
-		      }))
-		      .catch(() => this.setState({ loading: false }));
-		    	this.lastQuery = queryString;
-		 */
 		
 		axios.get(queryString).then(res =>
-	      {
+	    {
 	        const rd = res.data;
-	        //this.setState( {rows: rd} );
-	        //this.setState( {loading: false} );
-
-	        
 	        this.setState({
 		        rows: rd.content,
 		        totalCount: rd.totalElements,
 		        loading: false,
-		      })
-	        
-	        
-	        
+		    }) 
 	      })
 	 }
 	  	
@@ -102,9 +84,10 @@ class Home extends Component
 			const { rows, columns, pageSize, currentPage, totalCount , loading } = this.state;
 			return (
 			      <div>
+			      	<br></br>
 			      	<Breadcrumb>
 		      			<BreadcrumbItem><a href="#/" rel="noopener noreferrer">Home</a></BreadcrumbItem>
-		      			<BreadcrumbItem active>Films</BreadcrumbItem>
+		      			<BreadcrumbItem active>Countries</BreadcrumbItem>
 		      		</Breadcrumb>
 		      	  	<br></br>
 								<Row>
