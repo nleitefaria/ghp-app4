@@ -13,7 +13,7 @@ var divLoading =
 	'float': 'left', 'width': '300px', 'paddingTop': '0px', 'paddingLeft': '10px'
 };
 
-class Home extends Component
+class Countries extends Component
 {
 	constructor(props)
 	{
@@ -29,7 +29,7 @@ class Home extends Component
         		totalCount: 0,
         		currentPage: 0,
         		loading: true,
-						modal: false
+			    modal: false
         };
 
         this.changeCurrentPage = this.changeCurrentPage.bind(this);
@@ -107,4 +107,4 @@ class Home extends Component
 		}
 }
 
-export default Home;
+export default Countries;

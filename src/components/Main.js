@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Header from './Header';
 import Home from './Home';
 import Countries from './countries/Countries';
+import Departments from './departments/Departments';
 
 class Main extends Component
 {
@@ -17,11 +18,12 @@ class Main extends Component
 	            				<Row>
 	            					<Col>
 	            						<Header></Header>														
-	            						<NavLink to="/home"><b>Home</b></NavLink> | <NavLink to="/countries"><b>Countries</b></NavLink> 
-	            							<div className="content">
+	            						<NavLink to="/home"><b>Home</b></NavLink> | <NavLink to="/countries"><b>Countries</b></NavLink> | <NavLink to="/departments"><b>Departments</b></NavLink>
+										<div className="content">
 	            								<Route exact path="/home" component={Home}/>
-	            								<Route exact path="/countries" component={Countries}/>		
-	            							</div>
+	            								<Route exact path="/countries" component={Countries}/>
+												<Route exact path="/departments" component={Departments}/>
+											</div>
 	            					</Col>
 	            				</Row>
 	            			</Container>
