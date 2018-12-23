@@ -6,6 +6,7 @@ import Header from './Header';
 import Home from './Home';
 import Countries from './countries/Countries';
 import Departments from './departments/Departments';
+import Jobs from './jobs/Jobs';
 
 class Main extends Component
 {
@@ -18,11 +19,12 @@ class Main extends Component
 	            				<Row>
 	            					<Col>
 	            						<Header></Header>														
-	            						<NavLink to="/home"><b>Home</b></NavLink> | <NavLink to="/countries"><b>Countries</b></NavLink> | <NavLink to="/departments"><b>Departments</b></NavLink>
+	            						<NavLink to="/home"><b>Home</b></NavLink> | <NavLink to="/countries"><b>Countries</b></NavLink> | <NavLink to="/departments"><b>Departments</b></NavLink> | <NavLink to="/jobs"><b>Jobs</b></NavLink>
 										<div className="content">
 	            								<Route exact path="/home" component={Home}/>
 	            								<Route exact path="/countries" component={Countries}/>
 												<Route exact path="/departments" component={Departments}/>
+                                                <Route exact path="/jobs" component={Jobs}/>
 											</div>
 	            					</Col>
 	            				</Row>
