@@ -8,6 +8,7 @@ import Countries from './countries/Countries';
 import Departments from './departments/Departments';
 import Employees from './employees/Employees';
 import Jobs from './jobs/Jobs';
+import Locations from './locations/Locations';
 
 class Main extends Component
 {
@@ -20,13 +21,14 @@ class Main extends Component
 	            				<Row>
 	            					<Col>
 	            						<Header></Header>														
-	            						<NavLink to="/home"><b>Home</b></NavLink> | <NavLink to="/countries"><b>Countries</b></NavLink> | <NavLink to="/departments"><b>Departments</b></NavLink> | <NavLink to="/employees"><b>Employees</b></NavLink> | <NavLink to="/jobs"><b>Jobs</b></NavLink>
+	            						<NavLink to="/home"><b>Home</b></NavLink> | <NavLink to="/countries"><b>Countries</b></NavLink> | <NavLink to="/departments"><b>Departments</b></NavLink> | <NavLink to="/employees"><b>Employees</b></NavLink> | <NavLink to="/jobs"><b>Jobs</b></NavLink> | <NavLink to="/locations"><b>Locations</b></NavLink>
 										<div className="content">
 	            								<Route exact path="/home" component={Home}/>
 	            								<Route exact path="/countries" component={Countries}/>
 												<Route exact path="/departments" component={Departments}/>
 												<Route exact path="/employees" component={Employees}/>
                                                 <Route exact path="/jobs" component={Jobs}/>
+												<Route exact path="/locations" component={Locations}/>
 											</div>
 	            					</Col>
 	            				</Row>
